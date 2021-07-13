@@ -21,3 +21,20 @@
     background: white;
     
 }
+
+.todo-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-item{
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+}
+
+.material-icons {
+    font-size: 20px;
+    margin: auto;
+}
