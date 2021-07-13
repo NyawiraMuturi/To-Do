@@ -25,6 +25,22 @@
 .todo-list{
     display: flex;
     flex-direction: row;
+    padding: 20px;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.completed{
+    color: #aaa;
+}
+
+.completed .todo-item{
+    background: rgb(11, 223, 170);
+}
+
+.todo-list:hover .todo-item .material-icons{
+    opacity: 1;
 }
 
 .todo-item{
@@ -32,9 +48,26 @@
     border-radius: 50%;
     height: 28px;
     width: 28px;
+    margin-right: 25px;
 }
 
 .material-icons {
-    font-size: 20px;
+    font-size: 22px;
     margin: auto;
+    text-align: center;
+    opacity: 0;  
+}
+.control-box{
+    display: flex;
+}
+.control-button{
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    
+}
+
+.control-button:hover{
+    background: #eee;
 }
