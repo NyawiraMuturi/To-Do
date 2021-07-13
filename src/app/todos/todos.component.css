@@ -65,7 +65,13 @@
     padding: 10px;
     border: 2px solid #eee;
     border-radius: 8px;
+    visibility: hidden;
     
+}
+
+.todo-list:hover .control-box .control-button{
+    visibility: visible;
+    opacity: 1;
 }
 
 .control-button:hover{
