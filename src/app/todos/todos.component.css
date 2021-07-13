@@ -5,6 +5,10 @@
     color: white;
 }
 
+.btn{
+    background-color: linear-gradient(to right, #05999E, #CBE7E3);
+}
+
 .header h1{
     font-weight: bold;
     font-size: 50px;
