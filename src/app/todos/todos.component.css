@@ -85,3 +85,6 @@
 .control-button:hover{
     background: #eee;
 }
+p{
+    color: red;
+}

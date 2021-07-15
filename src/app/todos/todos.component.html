@@ -8,8 +8,11 @@
             <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
                 <h2>Today I shall...</h2>
                     <div class="d-flex">
-                        <input ngModel name="text" class="form-control mr-1" placeholder="add to-do">
+                        <input ngModel #todoTextField="ngModel" required name="text" class="form-control mr-1" placeholder="Add new to-do">
                         <button type="submit" class="btn btn-primary"> Add</button>
+                    </div>
+                    <div *ngIf="todoTextField.invalid && showValidationErrors">
+                        <p *ngIf="todoTextField.errors.required"role="alert">Enter new to-do</p>
                     </div>
             </form>
         </div>
