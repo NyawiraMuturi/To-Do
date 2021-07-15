@@ -6,7 +6,10 @@ import { Todo } from './todo';
 })
 export class DataService {
 
-  todos: Todo[];
+  todos: Todo[]= [
+    new Todo("Today I Dont feel like doing anything"),
+    new Todo("Today has been such a good day. I landed my first coding job an I love it.")
+  ]
 
   constructor() { }
 

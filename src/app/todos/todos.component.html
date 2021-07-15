@@ -18,12 +18,12 @@
 
     <Section>
         <div class="container">
-            <div class="todo-list completed">
+            <div class="todo-list completed" *ngFor="let todo of todos">
                 <div class="todo-item">
                     <i class="material-icons">check</i>
                 </div>
                 <div class="todo-text">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sit repellendus similique autem rem mollitia? Minima hic vero reiciendis animi?</h2>
+                <h2>{{todo.text}}</h2>
                 </div>
                 <div class="control-box ">
                     <div class="control-button">
