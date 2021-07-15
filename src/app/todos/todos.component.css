@@ -42,6 +42,10 @@
 .completed .todo-item{
     background: rgb(11, 223, 170);
 }
+.completed .todo-item .material-icons{
+    opacity: 1;
+    color: black;
+}
 
 .todo-list:hover .todo-item .material-icons{
     opacity: 1;

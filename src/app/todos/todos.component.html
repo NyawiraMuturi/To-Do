@@ -18,7 +18,7 @@
 
     <Section>
         <div class="container">
-            <div class="todo-list completed" *ngFor="let todo of todos">
+            <div class="todo-list" *ngFor="let todo of todos"[class.completed]="todo.completed">
                 <div class="todo-item">
                     <i class="material-icons">check</i>
                 </div>
