@@ -32,6 +32,7 @@
     padding: 20px;
     cursor: pointer;
     align-items: center;
+    
 
 }
 
@@ -74,6 +75,10 @@
     border: 2px solid #eee;
     border-radius: 8px;
     visibility: hidden;
+    position: relative;
+    bottom: 0;
+    left: 15px;
+    display: flex;
     
 }
 
@@ -86,5 +91,5 @@
     background: #eee;
 }
 p{
-    color: red;
+    color: #C70039 ;
 }

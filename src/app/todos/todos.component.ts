@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DataService } from '../data.service';
 import { Todo } from '../todo';
@@ -12,6 +12,7 @@ export class TodosComponent implements OnInit {
 
   todos: Todo[]
   showValidationErrors: boolean
+  @Output() todoClicked: EventEmitter<void> = new EventEmitter()
 
   constructor(private dataService: DataService) { }
 
@@ -21,8 +22,17 @@ export class TodosComponent implements OnInit {
 
   onFormSubmit(form: NgForm){
     if(form.invalid) return this.showValidationErrors=true
-    
+
     this.dataService.addTodo(new Todo(form.value.text))
+
+    this.showValidationErrors=false
+    form.reset()
   }
+
+  onTodoClicked(){
+    this.todoClicked.emit()
+    alert("I am God")
+  }
+
 
 }
