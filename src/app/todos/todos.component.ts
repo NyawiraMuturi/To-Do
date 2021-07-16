@@ -13,6 +13,8 @@ export class TodosComponent implements OnInit {
   todos: Todo[]
   showValidationErrors: boolean
   @Output() todoClicked: EventEmitter<void> = new EventEmitter()
+  @Output() editClicked: EventEmitter<void> = new EventEmitter()
+  @Output() deleteClicked: EventEmitter<void> = new EventEmitter()
 
   constructor(private dataService: DataService) { }
 
@@ -34,5 +36,9 @@ export class TodosComponent implements OnInit {
     todo.completed = !todo.completed;
   }
 
-
+  onDeleteClicked(todo: Todo){
+    this.deleteClicked.emit()
+    const index = this.todos.indexOf(todo)
+    this.dataService.deleteTodo(index)
+  }
 }
