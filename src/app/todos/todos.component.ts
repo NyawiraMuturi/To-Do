@@ -29,9 +29,9 @@ export class TodosComponent implements OnInit {
     form.reset()
   }
 
-  onTodoClicked(){
+  onTodoClicked(todo: Todo){
     this.todoClicked.emit()
-    alert("I am God")
+    todo.completed = !todo.completed;
   }
 
 
